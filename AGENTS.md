@@ -15,13 +15,26 @@ This is a URL-shortener app: Next.js 16 (App Router) + React 19 + TypeScript
 Drizzle ORM.
 
 Detailed, topic-specific standards live in [docs/](./docs) and are the
-source of truth for how to write code in this repo. **Read the relevant
-file(s) before making changes**, don't rely on general framework knowledge
-alone — several dependencies here (Next.js 16, Clerk 7, Tailwind v4,
-Drizzle 1.0) are recent major versions with behavior that differs from
-older, more commonly-seen versions. ALWAYS refer to the relevant .md file BEFORE generating any code:
+source of truth for how to write code in this repo. Don't rely on general
+framework knowledge alone — several dependencies here (Next.js 16, Clerk 7,
+Tailwind v4, Drizzle 1.0) are recent major versions with behavior that
+differs from older, more commonly-seen versions.
 
+> [!IMPORTANT]
+> It is incredibly important that you **ALWAYS read every relevant file in
+> [docs/](./docs) BEFORE generating ANY code** — not after, not
+> concurrently, not "if time allows". Never write or edit code from memory
+> or general framework knowledge when a doc file covers that topic. If
+> you're unsure whether a file is relevant, read it anyway; skipping this
+> step is not acceptable.
+
+- **[Project Structure](docs/project-structure.md)** - where things live, path aliases, what goes where
+- **[Next.js Conventions](docs/nextjs-conventions.md)** - Next.js 16 / App Router specifics (Proxy, async `params`, Server Components)
+- **[TypeScript Conventions](docs/typescript-conventions.md)** - TS/React style rules
+- **[UI & Styling](docs/ui-styling.md)** - Tailwind v4 + shadcn/ui conventions
+- **[Database](docs/database.md)** - Drizzle ORM + Neon conventions
 - **[Authentication Guidelines](docs/authentication.md)** - Clerk Integration, route protection, and auth patterns
+- **[Code Quality](docs/code-quality.md)** - linting, type checking, commands, general change hygiene
 
 ## Non-negotiables (summary)
 
