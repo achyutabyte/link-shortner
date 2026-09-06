@@ -35,6 +35,7 @@ export default async function DashboardPage() {
                             type="url"
                             name="url"
                             placeholder="https://example.com/your-long-link"
+                            maxLength={2048}
                             required
                             className="flex-1"
                         />
@@ -70,7 +71,7 @@ export default async function DashboardPage() {
                                     <span className="text-sm text-muted-foreground">
                                         {link.clicks} clicks
                                     </span>
-                                    <LinkActions slug={link.slug} />
+                                    <LinkActions id={link.id} slug={link.slug} url={link.url} />
                                 </div>
                             </CardContent>
                         </Card>

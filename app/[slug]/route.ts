@@ -10,7 +10,7 @@ export async function GET(
 ) {
     const { slug } = await params;
 
-    if (!slug) {
+    if (!slug || slug.length > 100 || !/^[a-zA-Z0-9_-]+$/.test(slug)) {
         notFound();
     }
 
@@ -21,6 +21,16 @@ export async function GET(
         .limit(1);
 
     if (!link) {
+        notFound();
+    }
+
+    // Defensive validation: ensure destination protocol is strictly http or https
+    try {
+        const parsedUrl = new URL(link.url);
+        if (parsedUrl.protocol !== "http:" && parsedUrl.protocol !== "https:") {
+            notFound();
+        }
+    } catch {
         notFound();
     }
 
