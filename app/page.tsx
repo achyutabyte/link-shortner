@@ -57,6 +57,32 @@ export default function Home() {
             </p>
           </article>
         </section>
+
+        <section className="mx-auto w-full max-w-4xl rounded-lg border border-border bg-card p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold text-card-foreground">
+            How it works
+          </h2>
+          <ol className="mt-4 grid gap-4 text-sm text-muted-foreground sm:grid-cols-3">
+            <li>
+              <p className="font-medium text-card-foreground">1. Sign up</p>
+              <p className="mt-1">
+                Create your account in seconds using the sign-up button.
+              </p>
+            </li>
+            <li>
+              <p className="font-medium text-card-foreground">2. Shorten a URL</p>
+              <p className="mt-1">
+                Add a long link and get a clean, shareable short URL.
+              </p>
+            </li>
+            <li>
+              <p className="font-medium text-card-foreground">3. Manage links</p>
+              <p className="mt-1">
+                Track and organize all of your short links from your dashboard.
+              </p>
+            </li>
+          </ol>
+        </section>
       </div>
     </main>
   );
