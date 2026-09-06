@@ -1,7 +1,9 @@
 import { auth } from "@clerk/nextjs/server";
 import { desc, eq } from "drizzle-orm";
+import { ExternalLink } from "lucide-react";
 import { db } from "@/db";
 import { links } from "@/db/schema";
+import { LinkActions } from "@/components/link-actions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -51,16 +53,25 @@ export default async function DashboardPage() {
                         <Card key={link.id}>
                             <CardContent className="flex items-center justify-between gap-4">
                                 <div className="flex flex-col overflow-hidden">
-                                    <span className="truncate font-medium text-foreground">
-                                        /{link.slug}
-                                    </span>
+                                    <a
+                                        href={`/${link.slug}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 font-medium text-foreground hover:underline"
+                                    >
+                                        <span className="truncate">/{link.slug}</span>
+                                        <ExternalLink className="size-3.5 shrink-0 text-muted-foreground" />
+                                    </a>
                                     <span className="truncate text-sm text-muted-foreground">
                                         {link.url}
                                     </span>
                                 </div>
-                                <span className="shrink-0 text-sm text-muted-foreground">
-                                    {link.clicks} clicks
-                                </span>
+                                <div className="flex shrink-0 items-center gap-3">
+                                    <span className="text-sm text-muted-foreground">
+                                        {link.clicks} clicks
+                                    </span>
+                                    <LinkActions slug={link.slug} />
+                                </div>
                             </CardContent>
                         </Card>
                     ))
