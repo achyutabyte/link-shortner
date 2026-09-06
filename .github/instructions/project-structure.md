@@ -36,13 +36,13 @@ import { cn } from "@/lib/utils";
 `components.json` (shadcn/ui config) declares these aliases — keep new code
 consistent with them:
 
-| Alias         | Path             |
-| ------------- | ---------------- |
-| `components`  | `@/components`   |
-| `ui`          | `@/components/ui`|
-| `lib`         | `@/lib`          |
-| `hooks`       | `@/hooks`        |
-| `utils`       | `@/lib/utils`    |
+| Alias        | Path              |
+| ------------ | ----------------- |
+| `components` | `@/components`    |
+| `ui`         | `@/components/ui` |
+| `lib`        | `@/lib`           |
+| `hooks`      | `@/hooks`         |
+| `utils`      | `@/lib/utils`     |
 
 `@/hooks` does not exist yet — create it (`hooks/`) the first time a custom
 hook is needed rather than inlining hooks under `components/`.
@@ -55,8 +55,8 @@ hook is needed rather than inlining hooks under `components/`.
   style — see [ui-styling.md](./ui-styling.md)).
 - **App-specific composed components** (e.g. a "create short link" form) →
   `components/` (not `components/ui/`).
-- **Database schema/queries** → `db/` (see [database.md](./database.md)).
+- **Database schema/queries** → `db/` (see [database.instructions.md](./database.instructions.md)).
 - **Framework-agnostic helpers** (slug generation, validation, formatting)
   → `lib/`.
 - **Auth/redirect logic that must run before rendering** → `proxy.ts` (see
-  [authentication.md](./authentication.md)).
+  [authentication.instructions.md](./authentication.instructions.md)).

@@ -9,7 +9,7 @@
   need declaration merging or are extending another interface.
 - Don't use `any`. If a type is genuinely unknown, use `unknown` and narrow
   it, or derive the type from source of truth (e.g. `typeof schema.links.$inferSelect`
-  from Drizzle — see [database.md](./database.md)) instead of hand-rolling a
+  from Drizzle — see [database.instructions.md](./database.instructions.md)) instead of hand-rolling a
   duplicate type.
 - Let inference work for simple values; add explicit return types on
   exported functions and component props for readability and to catch

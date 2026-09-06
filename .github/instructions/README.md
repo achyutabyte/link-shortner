@@ -22,11 +22,11 @@ Next.js starter page.
 3. [typescript-conventions.md](./typescript-conventions.md) — TS/React style
    rules.
 4. [ui-styling.md](./ui-styling.md) — Tailwind v4 + shadcn/ui conventions.
-5. [database.md](./database.md) — Drizzle ORM + Neon conventions.
+5. [database.instructions.md](./database.instructions.md) — Drizzle ORM + Neon conventions.
 6. [authentication.instructions.md](./authentication.instructions.md) — Clerk conventions.
-7. [code-quality.md](./code-quality.md) — linting, type checking, commands,
+7. [code-quality.instructions.md](./code-quality.instructions.md) — linting, type checking, commands,
    general change hygiene.
 
 Not every task needs every file — e.g. a pure UI change only needs
 `ui-styling.md` + `typescript-conventions.md`, while a schema change needs
-`database.md` + `code-quality.md`.
+`database.instructions.md` + `code-quality.instructions.md`.
